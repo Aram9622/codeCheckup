@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\LandingPageController;
 use Illuminate\Support\Facades\Route;
-
+use TCG\Voyager\Http\Controllers\VoyagerAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [\App\Http\Controllers\Web\LandingPageController::class,'index'])->name('index');
+Auth::routes();
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

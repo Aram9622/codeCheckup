@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
-
+use App\Facade\Api\LandingPageFacade;
 return [
 
     /*
@@ -191,6 +191,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        "landing_page" => LandingPageFacade::class,
         // ...
     ])->toArray(),
 
