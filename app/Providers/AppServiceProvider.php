@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
+use App\Services\Web\Auth\UserService;
 use Illuminate\Support\ServiceProvider;
-use App\Services\Api\LandingPageService;
+use App\Services\Web\LandingPageService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,11 +26,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->bind("landing_page", function ($app) {
-            return new LandingPageService(); 
+            return new LandingPageService();
+        });
+
+        $this->app->bind("user", function ($app) {
+            return new UserService();
         });
 
         $this->app->singleton('VoyagerGuard', function () {
             return 'admin';
         });
+
     }
 }

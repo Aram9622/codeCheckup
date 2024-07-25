@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
-use App\Facade\Api\LandingPageFacade;
+use App\Facade\Web\LandingPageFacade;
+use App\Facade\Web\Auth\UserFacade;
 return [
 
     /*
@@ -168,6 +169,7 @@ return [
          * Package Service Providers...
          */
 
+
         /*
          * Application Service Providers...
          */
@@ -192,6 +194,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         "landing_page" => LandingPageFacade::class,
+        "user" => UserFacade::class,
         // ...
     ])->toArray(),
 

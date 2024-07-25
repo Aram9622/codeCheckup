@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-namespace App\Services\Api;
+namespace App\Services\Web;
 use App\Models\LandingPage;
 use Illuminate\Support\Facades\DB;
 

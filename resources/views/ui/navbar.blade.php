@@ -1,6 +1,6 @@
 <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
     <div class="container">
-        <a class="logo" href="#">{{setting('site.title')}}</a>  
+        <a class="logo" href="#">{{setting('site.title')}}</a>
         <ul class="nav">
             @foreach($menus as $menu)
                 <li class="item">
@@ -21,8 +21,12 @@
                 @endif
             @else
                 <li class="item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                    <a id="navbarDropdown"
+                       class="nav-link text-[#26296d]"
+                       href="{{route("home")}}" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        My Account
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -55,5 +59,5 @@
               <div class="hamburger-inner"></div>
             </div>
         </a>
-    </div>          
+    </div>
 </nav>

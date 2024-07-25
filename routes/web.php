@@ -17,6 +17,8 @@ use TCG\Voyager\Http\Controllers\VoyagerAuthController;
 Route::get('/', [\App\Http\Controllers\Web\LandingPageController::class,'index'])->name('index');
 Auth::routes();
 
+Route::post("registration", [\App\Http\Controllers\Web\Auth\RegisterController::class,'register'])->name('registration');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

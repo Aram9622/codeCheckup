@@ -97,33 +97,35 @@
             <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email"requried>                 
+                        <input type="email" class="form-control" placeholder="Enter Email"requried>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
                     </div>
-                </div>  
+                </div>
             </form><!-- end of contact form -->
         </div><!-- end of container -->
     </section><!-- end of contact section -->
 
     <!-- footer -->
     <div class="container">
-        <footer class="footer">       
+        <footer class="footer">
             <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">Code CheckUp</a></p>
             @include("components.SocialLinks", ["data" => $socialLinks])
         </footer>
     </div> <!-- end of page footer -->
-	
+
 	<!-- core  -->
     <script src="{{asset('assets/vendors/jquery/jquery-3.4.1.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="{{asset("assets/vendors/bootstrap/bootstrap.bundle.js")}}"></script>
 
     <!-- bootstrap 3 affix -->
@@ -134,4 +136,4 @@
     <script src="{{asset('js/main.js')}}"></script>
 
 </body>
-</html> 
+</html>

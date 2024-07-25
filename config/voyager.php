@@ -192,7 +192,7 @@ return [
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'js/main.js',
     ],
 
     'googlemaps' => [
@@ -221,7 +221,7 @@ return [
 
     // Activate compass when environment is NOT local
     'compass_in_production' => false,
-    
+
     'media' => [
         // The allowed mimetypes to be uploaded through the media-manager.
         // 'allowed_mimetypes' => '*', //All types can be uploaded
@@ -231,7 +231,7 @@ return [
           'image/gif',
           'image/bmp',
           'video/mp4',
-          'image/svg+xml'   
+          'image/svg+xml'
         ],
         //Path for media-manager. Relative to the filesystem.
         'path'                => '/',
